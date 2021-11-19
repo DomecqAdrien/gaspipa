@@ -6,11 +6,10 @@
 //
 
 import Foundation
-struct Aliment: Identifiable {
+struct Aliment: Identifiable, Codable {
     var id = UUID()
     var libelle: String
-    var quantité: Int
     var peremption: Date
-    var categorie: String
-    var allergènes: Array<String>
+    var categorie: String?
+    var allergènes: Array<String>?
 }

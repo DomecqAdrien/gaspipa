@@ -27,6 +27,12 @@
 		EC95090B272C0221002CCDD2 /* RefrigerateurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC950909272C0221002CCDD2 /* RefrigerateurView.swift */; };
 		EC95090D272C2C2A002CCDD2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95090C272C2C2A002CCDD2 /* MenuView.swift */; };
 		EC95090E272C2C2A002CCDD2 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC95090C272C2C2A002CCDD2 /* MenuView.swift */; };
+		ECB1A01A2747A22500895239 /* recettes.json in Resources */ = {isa = PBXBuildFile; fileRef = ECB1A0192747A22400895239 /* recettes.json */; };
+		ECB1A01B2747A22500895239 /* recettes.json in Resources */ = {isa = PBXBuildFile; fileRef = ECB1A0192747A22400895239 /* recettes.json */; };
+		ECB1A01D2747ABC400895239 /* Quantité.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1A01C2747ABC400895239 /* Quantité.swift */; };
+		ECB1A01E2747ABC400895239 /* Quantité.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1A01C2747ABC400895239 /* Quantité.swift */; };
+		ECB1A0202747BC0300895239 /* AddAlimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1A01F2747BC0300895239 /* AddAlimentView.swift */; };
+		ECB1A0212747BC0300895239 /* AddAlimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1A01F2747BC0300895239 /* AddAlimentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +49,9 @@
 		EC950905272BFFF3002CCDD2 /* Refrigerateur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refrigerateur.swift; sourceTree = "<group>"; };
 		EC950909272C0221002CCDD2 /* RefrigerateurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigerateurView.swift; sourceTree = "<group>"; };
 		EC95090C272C2C2A002CCDD2 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		ECB1A0192747A22400895239 /* recettes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recettes.json; sourceTree = "<group>"; };
+		ECB1A01C2747ABC400895239 /* Quantité.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quantité.swift"; sourceTree = "<group>"; };
+		ECB1A01F2747BC0300895239 /* AddAlimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlimentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +84,7 @@
 		EC9508D9272BE882002CCDD2 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				ECB1A0182747A1AE00895239 /* resources */,
 				EC950908272C01EA002CCDD2 /* views */,
 				EC9508F8272BEB00002CCDD2 /* model */,
 				EC9508DA272BE882002CCDD2 /* GaspipaApp.swift */,
@@ -109,6 +119,7 @@
 				EC9508FF272BFC07002CCDD2 /* Etape.swift */,
 				EC950902272BFF64002CCDD2 /* Aliment.swift */,
 				EC950905272BFFF3002CCDD2 /* Refrigerateur.swift */,
+				ECB1A01C2747ABC400895239 /* Quantité.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -118,8 +129,17 @@
 			children = (
 				EC950909272C0221002CCDD2 /* RefrigerateurView.swift */,
 				EC95090C272C2C2A002CCDD2 /* MenuView.swift */,
+				ECB1A01F2747BC0300895239 /* AddAlimentView.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		ECB1A0182747A1AE00895239 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				ECB1A0192747A22400895239 /* recettes.json */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +221,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB1A01A2747A22500895239 /* recettes.json in Resources */,
 				EC9508EE272BE884002CCDD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECB1A01B2747A22500895239 /* recettes.json in Resources */,
 				EC9508EF272BE884002CCDD2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,8 +246,10 @@
 				EC950906272BFFF3002CCDD2 /* Refrigerateur.swift in Sources */,
 				EC95090A272C0221002CCDD2 /* RefrigerateurView.swift in Sources */,
 				EC9508FD272BEDE3002CCDD2 /* Recette.swift in Sources */,
+				ECB1A01D2747ABC400895239 /* Quantité.swift in Sources */,
 				EC95090D272C2C2A002CCDD2 /* MenuView.swift in Sources */,
 				EC9508EC272BE884002CCDD2 /* ContentView.swift in Sources */,
+				ECB1A0202747BC0300895239 /* AddAlimentView.swift in Sources */,
 				EC9508EA272BE884002CCDD2 /* GaspipaApp.swift in Sources */,
 				EC950900272BFC07002CCDD2 /* Etape.swift in Sources */,
 				EC9508FA272BEB7F002CCDD2 /* Ingredient.swift in Sources */,
@@ -240,8 +264,10 @@
 				EC950907272BFFF3002CCDD2 /* Refrigerateur.swift in Sources */,
 				EC95090B272C0221002CCDD2 /* RefrigerateurView.swift in Sources */,
 				EC9508FE272BEDE3002CCDD2 /* Recette.swift in Sources */,
+				ECB1A01E2747ABC400895239 /* Quantité.swift in Sources */,
 				EC95090E272C2C2A002CCDD2 /* MenuView.swift in Sources */,
 				EC9508ED272BE884002CCDD2 /* ContentView.swift in Sources */,
+				ECB1A0212747BC0300895239 /* AddAlimentView.swift in Sources */,
 				EC9508EB272BE884002CCDD2 /* GaspipaApp.swift in Sources */,
 				EC950901272BFC07002CCDD2 /* Etape.swift in Sources */,
 				EC9508FB272BEB7F002CCDD2 /* Ingredient.swift in Sources */,

@@ -6,10 +6,7 @@
 //
 
 import Foundation
-class Réfrigérateur {
-    var contenu: Array<Aliment>
-    
-    init() {
-        self.contenu = Array()
-    }
+struct Réfrigérateur: Codable {
+    var contenu: Array<Ingredient>
+
 }

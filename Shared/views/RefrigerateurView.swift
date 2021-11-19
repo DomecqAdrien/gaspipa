@@ -8,24 +8,27 @@
 import SwiftUI
 
 struct FrigoRow: View {
-    var aliment: Aliment
+    
+    var ingredient: Ingredient
+    
     
     var body: some View {
         HStack {
-            Text(aliment.libelle)
-            Text("\(aliment.peremption.formatted(.iso8601.year().month().day().dateSeparator(.dash)))")
+            Text(ingredient.aliment.libelle)
+            Text("\(ingredient.aliment.peremption.formatted(.iso8601.year().month().day().dateSeparator(.dash)))")
+            Text("\(ingredient.quantité.quantité)")
         }
     }
 }
 
 struct RefrigerateurView: View {
     
-    var frigo: Array<Aliment>
+    
+    
     
     var body: some View {
-        
         List(frigo) {
-            currentAliment in FrigoRow(aliment: currentAliment)
+            currentAliment in FrigoRow(ingredient: currentAliment)
         }
     }
 }
@@ -33,10 +36,7 @@ struct RefrigerateurView: View {
 struct Main_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            RefrigerateurView(frigo: [
-                Aliment(libelle: "Tomate", quantité: 3, peremption: Date(), categorie: "Fruit", allergènes: Array()),
-                Aliment(libelle: "Salade", quantité: 1, peremption: Date(), categorie: "Fruit", allergènes: Array())
-            ])
+            RefrigerateurView()
         }
     }
 }

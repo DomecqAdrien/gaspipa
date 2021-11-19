@@ -8,35 +8,44 @@
 import SwiftUI
 
 struct MenuView: View {
+    
+    @State private var add: Bool = false
+    
     var body: some View {
-        TabView {
-            NavigationView {
-                RefrigerateurView(
-                    frigo: [
-                        Aliment(libelle: "Tomate", quantité: 3, peremption: Date(), categorie: "Fruit", allergènes: Array()),
-                        Aliment(libelle: "Salade", quantité: 1, peremption: Date(), categorie: "Fruit", allergènes: Array())
-                    ]
-                ).navigationTitle("Réfrigérateur")
-            }.tabItem {
-                Image(systemName: "airpods.chargingcase.fill")
-                Text("Réfrigérateur")
+        VStack {
+            TabView {
+                NavigationView {
+                    RefrigerateurView().navigationTitle("Réfrigérateur")
+                        .toolbar {
+                            Button(action: {add = true}) {
+                                Image(systemName: "plus")
+                            }
+                        }
+                        .sheet(isPresented: $add) {
+                            AddAliment(close: $add)
+                        }
+                    
+                }.tabItem {
+                    Image(systemName: "airpods.chargingcase.fill")
+                    Text("Réfrigérateur")
+                }
+                
+                Text("Tab Content 2")
+                    .tabItem {
+                        Image(systemName: "fork.knife")
+                        Text("Recettes")
+                    }
+                Text("Tab Content 2")
+                    .tabItem {
+                        Image(systemName: "cart")
+                        Text("Courses")
+                    }
+                Text("Tab Content 2")
+                    .tabItem {
+                        Image(systemName: "gearshape")
+                        Text("Paramètres")
+                    }
             }
-            
-            Text("Tab Content 2")
-                .tabItem {
-                    Image(systemName: "fork.knife")
-                    Text("Recettes")
-                }
-            Text("Tab Content 2")
-                .tabItem {
-                    Image(systemName: "cart")
-                    Text("Courses")
-                }
-            Text("Tab Content 2")
-                .tabItem {
-                    Image(systemName: "gearshape")
-                    Text("Paramètres")
-                }
         }
     }
 }

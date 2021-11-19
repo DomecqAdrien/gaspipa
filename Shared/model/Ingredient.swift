@@ -6,9 +6,9 @@
 //
 
 import Foundation
-struct Ingredient {
-    private var aliment: Aliment
-    private var quantité: Int
-    private var unité: String
+struct Ingredient: Identifiable, Codable {
+    var id = UUID()
+    var aliment: Aliment
+    var quantité: Quantité
     
 }

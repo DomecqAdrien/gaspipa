@@ -1,0 +1,45 @@
+[
+    {
+        "titre":"Salade grecque",
+        "duree": 10,
+        "niveau": "Facile",
+        "nbPersonnes": 2,
+        "ingredients": [
+            {
+                "libelle": "tomate",
+                "quantité": 2,
+                "unité": ""
+            },
+            {
+                "libelle": "salade",
+                "quantité": 1,
+                "unité": ""
+            },
+            {
+                "libelle": "oignon",
+                "quantité": 1,
+                "unité": ""
+            },
+            {
+                "libelle": "concombre",
+                "quantité": 1,
+                "unité": ""
+            },
+            {
+                "libelle": "feta",
+                "quantité": 1,
+                "unité": ""
+            },
+            {
+                "libelle": "huile d'olive",
+                "quantité": 3,
+                "unité": "Cuillère à soupe"
+            },
+            
+        ],
+        "etapes": [
+        ],
+        "tags": ["entree"],
+        "isLiked": false
+    }
+]

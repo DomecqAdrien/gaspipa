@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Etape {
+struct Etape: Codable {
     private var numero: Int
     private var description: String
 }
