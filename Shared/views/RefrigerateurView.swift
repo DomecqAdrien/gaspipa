@@ -23,8 +23,8 @@ struct FrigoRow: View {
 
 struct RefrigerateurView: View {
     
-    
-    
+    @Binding var frigo: Array<Ingredient>
+        
     
     var body: some View {
         List(frigo) {
@@ -32,11 +32,11 @@ struct RefrigerateurView: View {
         }
     }
 }
-
-struct Main_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            RefrigerateurView()
-        }
-    }
-}
+//
+//struct Main_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Group {
+//            RefrigerateurView(frigo: [Ingredient]())
+//        }
+//    }
+//}

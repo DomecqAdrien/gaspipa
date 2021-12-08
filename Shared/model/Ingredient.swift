@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct Ingredient: Identifiable, Codable {
     var id = UUID()
     var aliment: Aliment

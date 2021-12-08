@@ -17,6 +17,7 @@ struct AddAliment: View {
     @State private var catégorie: Catégories = .legume
     @State private var date: Date = Date()
     @Binding var close: Bool
+    @Binding var frigo: Array<Ingredient>
     
     var body: some View {
         NavigationView {
@@ -51,7 +52,8 @@ struct AddAliment: View {
             let newQuantité = Quantité(quantité: unwrappedQuantité, unité: unité.rawValue)
             let aliment = Aliment(libelle: libellé, peremption: date, categorie: catégorie.rawValue)
             let ingredient = Ingredient(aliment: aliment, quantité: newQuantité)
-            saveJson(from: ingredient)
+            frigo.append(ingredient)
+            saveJson(from: frigo)
             close = false
         }
     }
@@ -78,8 +80,11 @@ enum Catégories: String, Hashable, CaseIterable {
 
 
 
-struct AddAliment_Previews: PreviewProvider {
-    static var previews: some View {
-        AddAliment(close: .constant(true))
-    }
-}
+//struct AddAliment_Previews: PreviewProvider {
+//
+//    @state var frigo: [Ingredient]()
+//
+//    static var previews: some View {
+//        AddAliment(close: .constant(true), frigo: $frigo)
+//    }
+//}

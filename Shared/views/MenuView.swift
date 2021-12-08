@@ -10,19 +10,20 @@ import SwiftUI
 struct MenuView: View {
     
     @State private var add: Bool = false
+    @State var frigo: Array<Ingredient>
     
     var body: some View {
         VStack {
             TabView {
                 NavigationView {
-                    RefrigerateurView().navigationTitle("Réfrigérateur")
+                    RefrigerateurView(frigo: $frigo).navigationTitle("Réfrigérateur")
                         .toolbar {
                             Button(action: {add = true}) {
                                 Image(systemName: "plus")
                             }
                         }
                         .sheet(isPresented: $add) {
-                            AddAliment(close: $add)
+                            AddAliment(close: $add , frigo: $frigo)
                         }
                     
                 }.tabItem {
@@ -50,10 +51,10 @@ struct MenuView: View {
     }
 }
 
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
-            .previewInterfaceOrientation(.portrait)
-    }
-}
+//struct MenuView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MenuView()
+//            .previewInterfaceOrientation(.portrait)
+//    }
+//}
 

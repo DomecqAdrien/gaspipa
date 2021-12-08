@@ -10,20 +10,16 @@ import SwiftUI
 @main
 struct GaspipaApp: App {
     
-    @State private var frigo = readJson() ?? [Ingredient]()
+    private var frigo = readJson() ?? [Ingredient]()
     
     var body: some Scene {
         WindowGroup {
-            MenuView()
+            MenuView(frigo: frigo)
         }
     }
 }
 
-func saveJson(from newIngredient: Ingredient) {
-    
-    var ingredients = readJson() ?? [Ingredient]()
-    ingredients.append(newIngredient)
-    
+func saveJson(from ingredients: Array<Ingredient>) {
     
     let encoder = JSONEncoder()
     encoder.dateEncodingStrategy = .iso8601
