@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Quantité: Codable {
+struct Quantité: Codable, Equatable {
     var quantité: Int
     var unité: String
 }

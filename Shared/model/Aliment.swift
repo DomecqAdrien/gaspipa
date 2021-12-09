@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Aliment: Identifiable, Codable {
+struct Aliment: Identifiable, Codable, Equatable {
     var id: UUID? = UUID()
     var libelle: String
     var peremption: Date?
