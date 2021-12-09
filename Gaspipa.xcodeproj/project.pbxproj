@@ -33,6 +33,10 @@
 		ECB1A01E2747ABC400895239 /* Quantité.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1A01C2747ABC400895239 /* Quantité.swift */; };
 		ECB1A0202747BC0300895239 /* AddAlimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1A01F2747BC0300895239 /* AddAlimentView.swift */; };
 		ECB1A0212747BC0300895239 /* AddAlimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB1A01F2747BC0300895239 /* AddAlimentView.swift */; };
+		ECBDAF2B2761F94A0074EA8B /* RecetteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBDAF2A2761F94A0074EA8B /* RecetteView.swift */; };
+		ECBDAF2C2761F94A0074EA8B /* RecetteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBDAF2A2761F94A0074EA8B /* RecetteView.swift */; };
+		ECBDAF2E2761F95A0074EA8B /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBDAF2D2761F95A0074EA8B /* CoursesView.swift */; };
+		ECBDAF2F2761F95A0074EA8B /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBDAF2D2761F95A0074EA8B /* CoursesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,8 @@
 		ECB1A0192747A22400895239 /* recettes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = recettes.json; sourceTree = "<group>"; };
 		ECB1A01C2747ABC400895239 /* Quantité.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quantité.swift"; sourceTree = "<group>"; };
 		ECB1A01F2747BC0300895239 /* AddAlimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlimentView.swift; sourceTree = "<group>"; };
+		ECBDAF2A2761F94A0074EA8B /* RecetteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecetteView.swift; sourceTree = "<group>"; };
+		ECBDAF2D2761F95A0074EA8B /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,8 @@
 				EC950909272C0221002CCDD2 /* RefrigerateurView.swift */,
 				EC95090C272C2C2A002CCDD2 /* MenuView.swift */,
 				ECB1A01F2747BC0300895239 /* AddAlimentView.swift */,
+				ECBDAF2A2761F94A0074EA8B /* RecetteView.swift */,
+				ECBDAF2D2761F95A0074EA8B /* CoursesView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -247,12 +255,14 @@
 				EC95090A272C0221002CCDD2 /* RefrigerateurView.swift in Sources */,
 				EC9508FD272BEDE3002CCDD2 /* Recette.swift in Sources */,
 				ECB1A01D2747ABC400895239 /* Quantité.swift in Sources */,
+				ECBDAF2E2761F95A0074EA8B /* CoursesView.swift in Sources */,
 				EC95090D272C2C2A002CCDD2 /* MenuView.swift in Sources */,
 				EC9508EC272BE884002CCDD2 /* ContentView.swift in Sources */,
 				ECB1A0202747BC0300895239 /* AddAlimentView.swift in Sources */,
 				EC9508EA272BE884002CCDD2 /* GaspipaApp.swift in Sources */,
 				EC950900272BFC07002CCDD2 /* Etape.swift in Sources */,
 				EC9508FA272BEB7F002CCDD2 /* Ingredient.swift in Sources */,
+				ECBDAF2B2761F94A0074EA8B /* RecetteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,12 +275,14 @@
 				EC95090B272C0221002CCDD2 /* RefrigerateurView.swift in Sources */,
 				EC9508FE272BEDE3002CCDD2 /* Recette.swift in Sources */,
 				ECB1A01E2747ABC400895239 /* Quantité.swift in Sources */,
+				ECBDAF2F2761F95A0074EA8B /* CoursesView.swift in Sources */,
 				EC95090E272C2C2A002CCDD2 /* MenuView.swift in Sources */,
 				EC9508ED272BE884002CCDD2 /* ContentView.swift in Sources */,
 				ECB1A0212747BC0300895239 /* AddAlimentView.swift in Sources */,
 				EC9508EB272BE884002CCDD2 /* GaspipaApp.swift in Sources */,
 				EC950901272BFC07002CCDD2 /* Etape.swift in Sources */,
 				EC9508FB272BEB7F002CCDD2 /* Ingredient.swift in Sources */,
+				ECBDAF2C2761F94A0074EA8B /* RecetteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

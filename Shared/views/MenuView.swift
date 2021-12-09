@@ -11,6 +11,8 @@ struct MenuView: View {
     
     @State private var add: Bool = false
     @State var frigo: Array<Ingredient>
+    @State var courses: Array<Ingredient>
+    var recettes: Array<Recette>
     
     var body: some View {
         VStack {
@@ -31,7 +33,9 @@ struct MenuView: View {
                     Text("Réfrigérateur")
                 }
                 
-                Text("Tab Content 2")
+                NavigationView {
+                    RecetteView(recettes: recettes).navigationTitle("Recettes")
+                }
                     .tabItem {
                         Image(systemName: "fork.knife")
                         Text("Recettes")

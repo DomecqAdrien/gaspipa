@@ -53,7 +53,7 @@ struct AddAliment: View {
             let aliment = Aliment(libelle: libellé, peremption: date, categorie: catégorie.rawValue)
             let ingredient = Ingredient(aliment: aliment, quantité: newQuantité)
             frigo.append(ingredient)
-            saveJson(from: frigo)
+            saveJson(fileName: "frigo.json", list: frigo)
             close = false
         }
     }
