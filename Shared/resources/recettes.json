@@ -3,37 +3,61 @@
         "titre":"Salade grecque",
         "duree": 10,
         "niveau": "Facile",
-        "nbPersonnes": 2,
+        "nbPersonne": 2,
         "ingredients": [
             {
-                "libelle": "tomate",
-                "quantité": 2,
-                "unité": ""
+                "aliment": {
+                    "libelle": "tomate"
+                },
+                "quantité": {
+                    "quantité": 2,
+                    "unité": ""
+                }
             },
             {
-                "libelle": "salade",
-                "quantité": 1,
-                "unité": ""
+                "aliment": {
+                    "libelle": "salade"
+                },
+                "quantité": {
+                    "quantité": 1,
+                    "unité": ""
+                }
             },
             {
-                "libelle": "oignon",
-                "quantité": 1,
-                "unité": ""
+                "aliment": {
+                    "libelle": "oignon"
+                },
+                "quantité": {
+                    "quantité": 1,
+                    "unité": ""
+                }
             },
             {
-                "libelle": "concombre",
-                "quantité": 1,
-                "unité": ""
+                "aliment": {
+                    "libelle": "concombre"
+                },
+                "quantité" : {
+                    "quantité": 1,
+                    "unité": ""
+                }
             },
             {
-                "libelle": "feta",
-                "quantité": 1,
-                "unité": ""
+                "aliment": {
+                    "libelle": "feta"
+                },
+                "quantité": {
+                    "quantité": 1,
+                    "unité": ""
+                }
             },
             {
-                "libelle": "huile d'olive",
-                "quantité": 3,
-                "unité": "Cuillère à soupe"
+                "aliment": {
+                    "libelle": "huile d'olive"
+                },
+                "quantité": {
+                    "quantité": 3,
+                    "unité": "Cuillère à soupe"
+                }
             },
             
         ],

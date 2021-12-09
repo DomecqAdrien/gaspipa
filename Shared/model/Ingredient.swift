@@ -8,7 +8,7 @@
 import Foundation
 
 struct Ingredient: Identifiable, Codable {
-    var id = UUID()
+    var id: UUID? = UUID()
     var aliment: Aliment
     var quantité: Quantité
     

@@ -15,7 +15,7 @@ struct FrigoRow: View {
     var body: some View {
         HStack {
             Text(ingredient.aliment.libelle)
-            Text("\(ingredient.aliment.peremption.formatted(.iso8601.year().month().day().dateSeparator(.dash)))")
+            Text("\(ingredient.aliment.peremption!.formatted(.iso8601.year().month().day().dateSeparator(.dash)))")
             Text("\(ingredient.quantité.quantité)")
         }
     }

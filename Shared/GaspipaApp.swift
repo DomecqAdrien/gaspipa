@@ -39,13 +39,22 @@ func readJson<T: Codable>(fileName: String, type: T.Type, path: String) -> T? {
     
     let url = getUrl(fileName: fileName, path: path)
     
-    guard let data = try? Data(contentsOf: url!) else {
+    guard let data = try? Data(contentsOf: url!, options: .mappedIfSafe) else {
         return nil
     }
     
+    print(data)
+    
     let decoder = JSONDecoder()
     decoder.dateDecodingStrategy = .iso8601
-    let decodedData = try? decoder.decode(type, from: data)
+    var decodedData: T?
+    do {
+        
+        decodedData = try decoder.decode(type, from: data)
+
+    } catch let error as NSError {
+        print(error)
+    }
     print(fileName)
     print(decodedData)
 
@@ -54,7 +63,7 @@ func readJson<T: Codable>(fileName: String, type: T.Type, path: String) -> T? {
 
 func getUrl(fileName: String, path: String) -> URL? {
     if path == "resources" {
-        return URL(string: Bundle.main.path(forResource: fileName, ofType: "json") ?? "")?.appendingPathComponent(fileName)
+        return URL(fileURLWithPath: Bundle.main.path(forResource: fileName, ofType: "json") ?? "")
     } else {
         return (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first ?? nil)?.appendingPathComponent(fileName)
     }

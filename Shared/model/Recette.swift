@@ -7,7 +7,7 @@
 
 import Foundation
 struct Recette: Identifiable, Codable {
-    var id = UUID()
+    var id: UUID? = UUID()
     var titre: String
     var duree: Int
     var niveau: String

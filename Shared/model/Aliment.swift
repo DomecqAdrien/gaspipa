@@ -7,9 +7,9 @@
 
 import Foundation
 struct Aliment: Identifiable, Codable {
-    var id = UUID()
+    var id: UUID? = UUID()
     var libelle: String
-    var peremption: Date
+    var peremption: Date?
     var categorie: String?
     var allergènes: Array<String>?
 }
