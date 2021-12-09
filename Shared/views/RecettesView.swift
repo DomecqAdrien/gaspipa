@@ -16,7 +16,7 @@ struct RecetteRow: View {
     }
 }
 
-struct RecetteView: View {
+struct RecettesView: View {
     
     var recettes: Array<Recette>
     
