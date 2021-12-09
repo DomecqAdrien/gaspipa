@@ -34,7 +34,7 @@ struct MenuView: View {
                 }
                 
                 NavigationView {
-                    RecetteView(recettes: recettes).navigationTitle("Recettes")
+                    RecettesView(recettes: recettes).navigationTitle("Recettes")
                 }
                     .tabItem {
                         Image(systemName: "fork.knife")
