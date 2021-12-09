@@ -61,8 +61,9 @@ struct AddAliment: View {
 
 enum Unités: String, Hashable, CaseIterable {
     case cas = "Cuillère à soupe"
-    case cac = "Cuillère à pafé"
+    case cac = "Cuillère à café"
     case gramme = "Grammes"
+    case unite = "Unité"
 }
 
 enum Catégories: String, Hashable, CaseIterable {
