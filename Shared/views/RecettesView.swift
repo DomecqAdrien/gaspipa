@@ -12,7 +12,9 @@ struct RecetteRow: View {
     var recette: Recette
     
     var body: some View {
-        Text(recette.titre)
+        NavigationLink(destination: RecetteView(recette: recette)) {
+            Text(recette.titre)
+        }
     }
 }
 

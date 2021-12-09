@@ -7,18 +7,30 @@
 
 import SwiftUI
 
-struct RecetteView: View {
+struct RecetteIngredientRow: View {
+    var ingredient: Ingredient
+    
     var body: some View {
-        Menu(/*@START_MENU_TOKEN@*/"Menu"/*@END_MENU_TOKEN@*/) {
-            /*@START_MENU_TOKEN@*/Text("Menu Item 1")/*@END_MENU_TOKEN@*/
-            /*@START_MENU_TOKEN@*/Text("Menu Item 2")/*@END_MENU_TOKEN@*/
-            /*@START_MENU_TOKEN@*/Text("Menu Item 3")/*@END_MENU_TOKEN@*/
+        HStack {
+            Text(ingredient.aliment.libelle)
+            Text("\(ingredient.quantité.quantité)")
         }
     }
 }
 
-struct RecetteView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecetteView()
+struct RecetteView: View {
+    var recette: Recette
+    
+    var body: some View {
+        
+        List(recette.ingredients, id: \.self) {
+            currentIngredient in RecetteIngredientRow(ingredient: currentIngredient)
+        }
     }
 }
+
+//struct RecetteView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RecetteView()
+//    }
+//}
