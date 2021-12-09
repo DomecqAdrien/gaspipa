@@ -34,13 +34,15 @@ struct MenuView: View {
                 }
                 
                 NavigationView {
-                    RecettesView(recettes: recettes).navigationTitle("Recettes")
+                    RecettesView(courses: $courses, recettes: recettes).navigationTitle("Recettes")
                 }
                     .tabItem {
                         Image(systemName: "fork.knife")
                         Text("Recettes")
                     }
-                Text("Tab Content 2")
+                NavigationView {
+                    CoursesView(courses: $courses)
+                }
                     .tabItem {
                         Image(systemName: "cart")
                         Text("Courses")

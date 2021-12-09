@@ -9,10 +9,13 @@ import SwiftUI
 
 struct RecetteRow: View {
     
+    
+    @Binding var courses: Array<Ingredient>
+    
     var recette: Recette
     
     var body: some View {
-        NavigationLink(destination: RecetteView(recette: recette)) {
+        NavigationLink(destination: RecetteView(courses: $courses, recette: recette)) {
             Text(recette.titre)
         }
     }
@@ -20,11 +23,13 @@ struct RecetteRow: View {
 
 struct RecettesView: View {
     
+    @Binding var courses: Array<Ingredient>
+    
     var recettes: Array<Recette>
     
     var body: some View {
         List(recettes) {
-            currentRecette in RecetteRow(recette: currentRecette)
+            currentRecette in RecetteRow(courses: $courses, recette: currentRecette)
         }
     }
 }

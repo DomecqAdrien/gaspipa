@@ -7,14 +7,27 @@
 
 import SwiftUI
 
-struct CoursesView: View {
+struct MyHeaderCourses: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Libellé")
+        Text("Quantité")
     }
 }
 
-struct CoursesView_Previews: PreviewProvider {
-    static var previews: some View {
-        CoursesView()
+struct CoursesView: View {
+    
+    
+    @Binding var courses: Array<Ingredient>
+        
+    
+    var body: some View {
+        List {
+            MyHeaderCourses()
+            ForEach(courses, id: \.self) {ingredient in
+                Text(ingredient.aliment.libelle)
+                Text("\(ingredient.quantité.quantité) \(ingredient.quantité.unité)")
+            }
+        }
     }
 }
+
