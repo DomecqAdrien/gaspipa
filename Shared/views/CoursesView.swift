@@ -9,8 +9,10 @@ import SwiftUI
 
 struct MyHeaderCourses: View {
     var body: some View {
-        Text("Libellé")
-        Text("Quantité")
+        HStack {
+            Text("Libellé      ")
+            Text("Quantité")
+        }
     }
 }
 
@@ -24,8 +26,10 @@ struct CoursesView: View {
         List {
             MyHeaderCourses()
             ForEach(courses, id: \.self) {ingredient in
-                Text(ingredient.aliment.libelle)
-                Text("\(ingredient.quantité.quantité) \(ingredient.quantité.unité)")
+                HStack{
+                    Text(ingredient.aliment.libelle)
+                    Text("\(ingredient.quantité.quantité) \(ingredient.quantité.unité)")
+                }
             }
         }
     }
