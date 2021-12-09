@@ -24,9 +24,11 @@ struct FrigoRow: View {
 
 struct MyHeader: View {
     var body: some View {
-        Text("Libellé")
-        Text("Date de péremption")
-        Text("Quantité")
+        HStack {
+            Text("Libellé      ")
+            Text("Date de péremption     ")
+            Text("Quantité")
+        }
     }
 }
 
@@ -39,9 +41,12 @@ struct RefrigerateurView: View {
         List {
             MyHeader()
             ForEach(frigo, id: \.self) {ingredient in
-                Text(ingredient.aliment.libelle)
-                Text("\(ingredient.aliment.peremption!.formatted(.iso8601.year().month().day().dateSeparator(.dash)))")
-                Text("\(ingredient.quantité.quantité)")
+                HStack{
+                    Text(ingredient.aliment.libelle)
+                    Text("     \(ingredient.aliment.peremption!.formatted(.iso8601.year().month().day().dateSeparator(.dash)))")
+                    Text("     \(ingredient.quantité.quantité) \(ingredient.quantité.unité)")
+                }
+                
             }
         }
 //        VStack{
