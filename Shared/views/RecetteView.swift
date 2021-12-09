@@ -29,6 +29,9 @@ struct RecetteView: View {
         List(recette.ingredients, id: \.self) {
             currentIngredient in RecetteIngredientRow(ingredient: currentIngredient)
         }
+        /*List(recette.ingredients, id: \.self) {
+            currentIngredient in RecetteIngredientRow(ingredient: currentIngredient)
+        }*/
         Button("Ajouter les ingrédients aux courses") {
             validateForm(ingredients: recette.ingredients)
         }
